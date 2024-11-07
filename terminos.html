@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - Tienda de Juegos Retro Digitales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #4a4a4a;
+            border-bottom: 2px solid #4a4a4a;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #5a5a5a;
+            margin-top: 20px;
+        }
+        .checkbox-container {
+            margin-bottom: 10px;
+        }
+        .checkbox-container label {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-container input {
+            margin-right: 10px;
+        }
+        #submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        #submit-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Términos y Condiciones - Tienda de Juegos Retro Digitales</h1>
+
+    <p>Bienvenido a nuestra tienda de juegos retro digitales. Al utilizar nuestro sitio web y servicios, aceptas los siguientes términos y condiciones:</p>
+
+    <form id="terms-form">
+        <h2>1. Uso del Sitio</h2>
+        <p>Al utilizar nuestro sitio, te comprometes a no utilizarlo con fines ilegales o prohibidos por estos términos y condiciones.</p>
+        <div class="checkbox-container">
+            <label>
+                <input type="checkbox" required> Acepto los términos de uso del sitio
+            </label>
+        </div>
+
+        <h2>2. Productos y Servicios</h2>
+        <p>Ofrecemos juegos retro en formato digital. Todos los juegos se venden "tal cual" y no garantizamos su compatibilidad con todos los sistemas o dispositivos.</p>
+        <div class="checkbox-container">
+            <label>
+                <input type="checkbox" required> Entiendo la naturaleza de los productos y servicios ofrecidos
+            </label>
+        </div>
+
+        <h2>3. Compras y Pagos</h2>
+        <p>Al realizar una compra, garantizas que tienes la autoridad legal para utilizar el método de pago elegido. Todos los precios están en la moneda especificada y no incluyen impuestos aplicables.</p>
+        <div class="checkbox-container">
+            <label>
+                <input type="checkbox" required> Acepto los términos de compra y pago
+            </label>
+        </div>
+
+        <h2>4. Entrega Digital</h2>
+        <p>Los juegos se entregan digitalmente. Una vez que se complete la compra, recibirás instrucciones para descargar tu juego. No ofrecemos reembolsos por descargas completadas.</p>
+        <div class="checkbox-container">
+            <label>
+                <input type="checkbox" required> Entiendo y acepto la política de entrega digital y reembolsos
+            </label>
+        </div>
+
+        <h2>5. Derechos de Autor y Propiedad Intelectual</h2>
+        <p>Todos los juegos ofrecidos están protegidos por derechos de autor. La compra de un juego te otorga una licencia para uso personal, no para redistribución o reventa.</p>
+        <div class="checkbox-container">
+            <label>
+                <input type="checkbox" required> Acepto respetar los derechos de autor y la propiedad intelectual
+            </label>
+        </div>
+
+        <button type="submit" id="submit-btn">Acepto todos los Términos y Condiciones</button>
+    </form>
+
+    <h2>6. Cuenta de Usuario</h2>
+    <p>Eres responsable de mantener la confidencialidad de tu cuenta y contraseña. Notifícanos inmediatamente si sospechas de un uso no autorizado de tu cuenta.</p>
+
+    <h2>7. Limitación de Responsabilidad</h2>
+    <p>No somos responsables de problemas técnicos que puedan surgir con los juegos descargados o su compatibilidad con tu sistema.</p>
+
+    <h2>8. Modificaciones de los Términos</h2>
+    <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación en el sitio.</p>
+
+    <h2>9. Ley Aplicable</h2>
+    <p>Estos términos se regirán e interpretarán de acuerdo con las leyes del país donde está registrada nuestra empresa.</p>
+
+    <h2>10. Contacto</h2>
+    <p>Si tienes alguna pregunta sobre estos Términos y Condiciones, por favor contáctanos a través de [tu dirección de correo electrónico].</p>
+
+    <p>Última actualización: [Fecha de hoy]</p>
+
+    <script>
+        document.getElementById('terms-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const checkboxes = this.querySelectorAll('input[type="checkbox"]');
+            let allChecked = true;
+            checkboxes.forEach(function(checkbox) {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+            });
+            if (allChecked) {
+                alert('Has aceptado todos los Términos y Condiciones. ¡Gracias!');
+                // Aquí puedes añadir código para enviar la aceptación al servidor
+            } else {
+                alert('Por favor, acepta todos los Términos y Condiciones para continuar.');
+            }
+        });
+    </script>
+</body>
+</html>
